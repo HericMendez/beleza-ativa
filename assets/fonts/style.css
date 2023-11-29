@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Beautifully Delicious';
+    src: local('Beautifully Delicious Script Bold'), local('Beautifully-Delicious-Script-Bold'),
+        url('BDScript-Bold.woff2') format('woff2'),
+        url('BDScript-Bold.woff') format('woff'),
+        url('BDScript-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+  }

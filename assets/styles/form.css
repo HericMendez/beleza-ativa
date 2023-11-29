@@ -1,0 +1,38 @@
+
+  
+  #form {
+    
+    box-sizing: border-box;
+    margin-left: 2rem;
+  }
+  
+  .form-field {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 0 0 1rem 0;
+  }
+  label, input, textarea {
+
+    padding: 0.5rem;
+    box-sizing: border-box;
+    justify-content: space-between;
+    font-size: 1.1rem;
+  }
+  textarea{
+    min-height: 150px;
+  }
+  label {
+    text-align: left;
+
+  }
+  input, textarea {
+    border: 2px solid #aaa;
+    border-radius: 2px;
+  }
+  .error-message {
+      flex: 0 0 100%;
+      margin-left: 30%;
+      color: red;
+  }
+  
