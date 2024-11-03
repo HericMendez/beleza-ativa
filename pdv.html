@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDV - CRUD</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="mb-3">
+            <h5>Total de Produtos em Estoque: <span id="totalQuantity">0</span></h5>
+        </div>
+        <button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#productModal">
+            Adicionar Produto
+        </button>
+        
+        <!-- Nova seção para mostrar o total de produtos em estoque -->
+
+        <!-- Modal -->
+        <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="productModalLabel">Produto</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="productForm">
+                            <div class="mb-3">
+                                <label for="code" class="form-label">Código</label>
+                                <input type="text" class="form-control" id="code" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Nome</label>
+                                <input type="text" class="form-control" id="name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="price" class="form-label">Preço</label>
+                                <input type="number" class="form-control" id="price" step="0.01" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="quantity" class="form-label">Quantidade</label>
+                                <input type="number" class="form-control" id="quantity" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="description" class="form-label">Descrição</label>
+                                <input type="text" class="form-control" id="description" maxlength="100" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="category" class="form-label">Categoria</label>
+                                <select id="category" class="form-select">
+                                    <option value="Alimentos">Maquiagens</option>
+                                    <option value="Bebidas">Bebidas</option>
+                                    <option value="Eletrônicos">Eletrônicos</option>
+                                </select>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-primary" onclick="saveProduct()" data-bs-dismiss="modal">Salvar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Código</th>
+                    <th>Nome</th>
+                    <th>Preço</th>
+                    <th>Quantidade</th>
+                    <th>Descrição</th>
+                    <th>Categoria</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="productTableBody">
+                <!-- Os produtos serão carregados aqui -->
+            </tbody>
+        </table>
+    </div>
+
+
+    <script src="assets/scripts/pdv.js"></script>
+</body>
+</html>

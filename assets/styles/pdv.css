@@ -1,0 +1,21 @@
+/* Estilos para expandir a tabela */
+#productTable {
+    width: 100%;
+}
+
+
+
+table {
+    width: 100%;
+    table-layout: fixed;
+}
+
+table th, table td {
+    white-space: nowrap;
+
+    overflow: hidden;
+}
+
+table th:nth-child(5), table td:nth-child(5) {
+    width: 40%; /* Ajusta a largura da coluna de descrição */
+}

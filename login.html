@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Beleza Ativa</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link href="assets/fonts/style.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
+
+  <link rel="stylesheet" href="assets/styles/main.css" />
+  <link rel="stylesheet" href="assets/styles/login.css">
+  <link rel="stylesheet" href="assets/styles/_variables.css" />
+
+  <link rel="stylesheet" href="assets/styles/sidebar.css" />
+  <link rel="stylesheet" href="assets/styles/carousel.css" />
+  <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+  <!--  -->
+</head>
+
+<body>
+  <div id="wrapper">
+    <a href="#" id="sidebar-toggle"><i class="fa fa-bars"></i></a>
+    <aside id="sidebar-wrapper">
+<div>
+      <!-- Div que exibe uma saudação se houver um usuário armazenado -->
+      <div class="sidebar-brand" id="sidebar-brand" style="display: none;">
+        <i class="fa fa-user-circle-o"></i>
+        <p>Bem-vindo, <span id="username-display">Usuario</span></p>
+        <a href="#" id="logout">Sair</a> <!-- Sair (remove o usuário armazenado e redireciona para home) -->
+    </div>
+    
+    <!-- Div que exibe opções de login e cadastro se não houver um usuário armazenado -->
+    <div class="d-flex flex-row ms-5 mt-4 fw-bold" id="login-prompt" style="display: none;">
+        <a href="login.html">Entre</a>
+        <span>&nbsp;ou&nbsp;</span> 
+        <a href="login.html">Cadastre-se</a>
+    </div>
+</div>
+
+
+      </form>
+      <ul class="sidebar-nav mt-5">
+        <li>
+
+
+        </li>
+        <li>
+          <a href="index.html"><i class="fa fa-home"></i>Home</a>
+        </li>
+
+        <li>
+          <a href="produtos.html"><i class="fa fa-shopping-bag"></i>Produtos</a>
+        </li>
+
+        <li>
+          <a href="carrinho.html"><i class="fa fa-shopping-cart"></i>Carrinho</a>
+        </li>
+        <li>
+          <a href="sobre.html"><i class="fa fa-info-circle"></i>Sobre Nós</a>
+        </li>
+        <li>
+          <a href="contato.html"><i class="fa fa-comments-o"></i>Contato</a>
+        </li>
+      </ul>
+    </aside>
+
+
+    <section id="content-wrapper">
+      <div class="container">
+        <div class="tabs">
+          <div class="tab active" onclick="showForm('login')">Login</div>
+          <div class="tab" onclick="showForm('cadastro')">Cadastro</div>
+        </div>
+
+        <!-- Formulário de login -->
+        <form id="login" class="form active">
+          <div class="form-group">
+            <label for="login-email">Email:</label>
+            <input type="email" value="user@gmail.com" id="login-email" required>
+          </div>
+          <div class="form-group">
+            <label for="login-password">Senha:</label>
+            <input type="password" value="user" id="login-password" required>
+          </div>
+          <button type="submit" class="button">Entrar</button>
+          <a href="#">Esqueceu a senha?</a>
+        </form>
+
+        <form id="cadastro" class="form">
+          <div class="form-group">
+            <label for="register-name">Nome:</label>
+            <input type="text" id="register-name" required>
+          </div>
+          <div class="form-group">
+            <label for="register-email">Email:</label>
+            <input type="email" id="register-email" required>
+          </div>
+          <div class="form-group">
+            <label for="register-cpf">CPF:</label>
+            <input type="text" id="register-cpf" required>
+          </div>
+          <div class="form-group">
+            <label for="register-password">Senha:</label>
+            <input type="password" id="register-password" required>
+          </div>
+          <button class="button" onclick="register()">Cadastrar</button>
+        </form>
+      </div>
+    </section>
+  </div>
+  <script src="assets/scripts/sidebar.js"></script>
+  <script src="assets/scripts/login.js"></script>
+</body>
+
+</html>

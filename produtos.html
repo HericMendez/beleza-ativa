@@ -38,10 +38,21 @@
     <div id="wrapper">
       <a href="#" id="sidebar-toggle"><i class="fa fa-bars"></i></a>
       <aside id="sidebar-wrapper">
-        <div class="sidebar-brand">
-          <i class="fa fa-user-circle-o"></i>
-          <p>Bem-vinda, Evelyn</p>
+        <div>
+          <!-- Div que exibe uma saudação se houver um usuário armazenado -->
+          <div class="sidebar-brand" id="sidebar-brand" style="display: none;">
+            <i class="fa fa-user-circle-o"></i>
+            <p>Bem-vindo, <span id="username-display">Usuario</span></p>
+            <a href="#" id="logout">Sair</a> <!-- Sair (remove o usuário armazenado e redireciona para home) -->
         </div>
+        
+        <!-- Div que exibe opções de login e cadastro se não houver um usuário armazenado -->
+        <div class="d-flex flex-row ms-5 mt-4 fw-bold" id="login-prompt" style="display: none;">
+            <a href="login.html">Entre</a>
+            <span>&nbsp;ou&nbsp;</span> 
+            <a href="login.html">Cadastre-se</a>
+        </div>
+    </div>
 
         <ul class="sidebar-nav">
           <li>
@@ -111,7 +122,7 @@
                             sua pele quanto a sua alma.
                           </p>
                
-                          <a href="#" class="read-more">Ver Detalhes</a>
+                          <a href="produto-detalhes.html" class="read-more">Ver Detalhes</a>
                         </div>
                       </div>
 
